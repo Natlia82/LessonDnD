@@ -1,12 +1,6 @@
 const tasksListElement = document.querySelector('.tasks__list');
 const taskElements = tasksListElement.querySelectorAll('.tasks__item');
-/*
-taskElements[0].draggable = true;
-taskElements[1].draggable = true;
-taskElements[2].draggable = true;
-taskElements[3].draggable = true;
-taskElements[4].draggable = true;
-*/
+
 for (let i = 0; i < taskElements.length; i++) {
     taskElements[i].draggable = true;
 }
@@ -38,7 +32,7 @@ const getNextElement = (cursorPosition, currentElement) => {
 tasksListElement.addEventListener('dragover', (evt) => {
     evt.preventDefault();
 
-    const activeElement = tasksListElement.querySelector(`.selected`);
+    const activeElement = tasksListElement.querySelector('.selected');
     const currentElement = evt.target;
     const isMoveable = activeElement !== currentElement &&
         currentElement.classList.contains('tasks__item');
@@ -64,4 +58,26 @@ tasksListElement.addEventListener('dragover', (evt) => {
     tasksListElement.insertBefore(activeElement, nextElement);
 });
 
-/***********/
+/******добавление элемента*****/
+
+
+const but = document.querySelector('.add');
+but.addEventListener("click", cliki);
+
+function cliki() {
+    const li = document.createElement('li');
+    li.className = 'tasks__item';
+    li.draggable = true;
+    li.textContent = 'новый элемент';
+
+    let elem = document.querySelector('.tasks__list');
+    console.log(elem);
+    elem.appendChild(li);
+}
+
+const butAdd = document.querySelector('.add_card');
+butAdd.addEventListener('click', addCard);
+
+function addCard() {
+
+}

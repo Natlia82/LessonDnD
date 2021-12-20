@@ -3,11 +3,15 @@ body {
     font-size: 18px;
     line-height: 25px;
     color: #164a44;
-    background-color: #b2d9d0;
+    background-color: royalblue;
 }
 
 .tasks {
     width: 30%;
+    background-color: rgb(240, 228, 228);
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tasks__title {
@@ -23,14 +27,14 @@ body {
 }
 
 .tasks__item {
-    transition: background-color 0.5s;
+    background-color: white;
     margin-bottom: 10px;
     padding: 5px;
     text-align: center;
-    border: 2px dashed #b2d9d0;
+    /* border: 2px dashed #b2d9d0;*/
     border-radius: 10px;
     cursor: grabbing;
-    background-color: #dff2ef;
+    background-color: white;
     transition: background-color 0.5s;
 }
 
@@ -41,4 +45,13 @@ body {
 .selected {
     opacity: 0.01;
     /*  background-color: darkslateblue;*/
+}
+
+.add {
+    background-color: green;
+    min-width: 30%;
+    color: white;
+    margin-top: 10px;
+    text-transform: capitalize;
+    border-radius: 5px;
 }
