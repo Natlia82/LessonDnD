@@ -57,27 +57,3 @@ tasksListElement.addEventListener('dragover', (evt) => {
 
     tasksListElement.insertBefore(activeElement, nextElement);
 });
-
-/******добавление элемента*****/
-
-
-const but = document.querySelector('.add');
-but.addEventListener("click", cliki);
-
-function cliki() {
-    const li = document.createElement('li');
-    li.className = 'tasks__item';
-    li.draggable = true;
-    li.textContent = 'новый элемент';
-
-    let elem = document.querySelector('.tasks__list');
-    console.log(elem);
-    elem.appendChild(li);
-}
-
-const butAdd = document.querySelector('.add_card');
-butAdd.addEventListener('click', addCard);
-
-function addCard() {
-
-}

@@ -49,9 +49,34 @@ body {
 
 .add {
     background-color: green;
-    min-width: 30%;
+    width: 30%;
     color: white;
     margin-top: 10px;
     text-transform: capitalize;
     border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.textNew {
+    margin: 1px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+}
+
+.add_card:hover {
+    background: white;
+}
+
+.add_card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.displayNone {
+    display: none;
 }
