@@ -86,3 +86,7 @@ body {
 .displayNone {
     display: none;
 }
+
+#textCuntentNew {
+    margin-top: 10px;
+}
