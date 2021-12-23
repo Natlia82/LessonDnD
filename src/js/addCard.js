@@ -1,17 +1,21 @@
 /******добавление элемента*****/
-function cliki(i) {
+export default function InsertCard(i, textCard) {
     const divDelete = document.createElement('div');
     divDelete.classList.add('close');
     divDelete.classList.add('deleteLi');
     divDelete.classList.add('displayNone');
     const li = document.createElement('li');
-    const text = document.getElementsByClassName('textNew')[i].value;
+    const text = textCard;
     li.className = 'tasks__item';
     li.draggable = true;
     li.textContent = text;
     li.insertAdjacentElement('beforeend', divDelete)
     let elem = document.querySelectorAll('.tasks__list')[i];
     elem.appendChild(li);
+}
+
+function cliki(i) {
+    InsertCard(i, document.getElementsByClassName('textNew')[i].value);
     togleTextarea(i);
     removeAddButton(i);
 }
