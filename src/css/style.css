@@ -37,6 +37,7 @@ body {
     background-color: white;
     transition: background-color 0.5s;
     word-wrap: break-word;
+    position: relative;
 }
 
 .tasks__item:last-child {
@@ -92,8 +93,12 @@ body {
     margin-top: 10px;
 }
 
-.contenerButton {
+.contenerButton,
+.contener {
     display: flex;
+}
+
+.contenerButton {
     align-items: center;
 }
 
@@ -106,4 +111,11 @@ body {
 
 .canselAdd {
     margin-left: 10px;
+}
+
+.deleteLi {
+    position: absolute;
+    content: "";
+    top: 2px;
+    right: 3px;
 }
