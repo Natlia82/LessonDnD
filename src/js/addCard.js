@@ -1,11 +1,15 @@
 /******добавление элемента*****/
 function cliki(i) {
+    const divDelete = document.createElement('div');
+    divDelete.classList.add('close');
+    divDelete.classList.add('deleteLi');
+    divDelete.classList.add('displayNone');
     const li = document.createElement('li');
     const text = document.getElementsByClassName('textNew')[i].value;
     li.className = 'tasks__item';
     li.draggable = true;
     li.textContent = text;
-
+    li.insertAdjacentElement('beforeend', divDelete)
     let elem = document.querySelectorAll('.tasks__list')[i];
     elem.appendChild(li);
     togleTextarea(i);
