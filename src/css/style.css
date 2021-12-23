@@ -77,6 +77,12 @@ body {
     border-radius: 5px;
 }
 
+.textNew {
+    font-family: "Tahoma", sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
 .displayNone {
     display: none;
 }
