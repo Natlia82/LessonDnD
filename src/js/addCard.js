@@ -17,6 +17,8 @@ function removeAddButton() {
     buttonAdd.classList.toggle('displayNone');
     const AddCard = document.querySelector('.add');
     AddCard.classList.toggle('displayNone');
+    const canselAdd = document.querySelector('.canselAdd');
+    canselAdd.classList.toggle('displayNone');
 }
 
 function togleTextarea() {
@@ -38,4 +40,10 @@ butAdd.addEventListener('click', () => {
 const but = document.querySelector('.add');
 but.addEventListener("click", (e) => {
     cliki();
+});
+
+const canselAdd = document.querySelector('.canselAdd');
+canselAdd.addEventListener("click", (e) => {
+    removeAddButton();
+    togleTextarea();
 });
