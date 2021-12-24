@@ -1,3 +1,5 @@
+import InsertLocalStore from './localStore';
+
 let cursorCard = document.querySelector('.contener');
 cursorCard.addEventListener('mouseover', (e) => {
     if (e.target.tagName == 'LI') {
@@ -18,9 +20,10 @@ cursorCard.addEventListener('click', (e) => {
 
     if (e.target.classList.contains('deleteLi')) {
         // e.target.parentNode.remove()
+        console.log(e.target.parentNode.parentNode);
         e.target.parentNode.remove();
-        // console.log();
 
+        InsertLocalStore(0);
     }
 
 });

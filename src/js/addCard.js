@@ -1,4 +1,6 @@
 /******добавление элемента*****/
+import InsertLocalStore from './localStore';
+
 export default function InsertCard(i, textCard) {
     const divDelete = document.createElement('div');
     divDelete.classList.add('close');
@@ -18,6 +20,7 @@ function cliki(i) {
     InsertCard(i, document.getElementsByClassName('textNew')[i].value);
     togleTextarea(i);
     removeAddButton(i);
+    InsertLocalStore(i);
 }
 
 
