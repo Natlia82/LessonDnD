@@ -20,10 +20,10 @@ cursorCard.addEventListener('click', (e) => {
 
     if (e.target.classList.contains('deleteLi')) {
         // e.target.parentNode.remove()
-        console.log(e.target.parentNode.parentNode);
+        const n = e.target.parentNode.parentNode.parentNode.getAttribute('data-sevtion');
+        console.log(n);
         e.target.parentNode.remove();
-
-        InsertLocalStore(0);
+        InsertLocalStore(n);
     }
 
 });
