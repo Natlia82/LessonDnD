@@ -3,12 +3,12 @@ import InsertLocalStore from './localStore';
 const cursorCard = document.querySelector('.contener');
 cursorCard.addEventListener('mouseover', (e) => {
   if (e.target.tagName === 'LI') {
-      e.target.children[0].classList.remove('displayNone');
+    e.target.children[0].classList.remove('displayNone');
   }
 });
 cursorCard.addEventListener('mouseout', (e) => {
   if (e.target.tagName === 'LI') {
-      e.target.children[0].classList.add('displayNone');
+    e.target.children[0].classList.add('displayNone');
   }
 });
 
