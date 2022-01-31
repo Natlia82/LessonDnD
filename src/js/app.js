@@ -1,3 +1,4 @@
+import InsertLocalStore from './localStore';
 const tasksContener = document.querySelector('.contener');
 const tasksListElement = document.querySelectorAll('.tasks__list');
 const taskElements = tasksContener.querySelectorAll('.tasks__item');
@@ -59,5 +60,8 @@ tasksContener.addEventListener('dragover', (evt) => {
 
     currentElement.closest('.tasks__list').insertBefore(activeElement, nextElement);
     //  tasksListElement[1].insertBefore(activeElement, nextElement);
+    for (let j = 0; j < 3; j = j + 1) {
+        InsertLocalStore(j);
+    }
 
 });
